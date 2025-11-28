@@ -1,0 +1,57 @@
+.carousel {
+  width: 100%; 
+  height: 450px; /* CLAVE: Altura unificada con el grid de marketing */
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin: 0; 
+  background-color: #1a1a1a; 
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+}
+
+.slide-container.active {
+  opacity: 1;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.dots {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  background: #ffffff88;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dots span.active {
+  background: #fff;
+  transform: scale(1.2);
+}

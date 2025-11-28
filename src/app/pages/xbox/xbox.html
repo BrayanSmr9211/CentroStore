@@ -1,0 +1,36 @@
+<h1 class="page-title">Xbox</h1>
+<div class="grid">
+  <div class="card" *ngFor="let item of products">
+
+     <!-- Imagen -->
+    <div class="image-container">
+      <img [src]="item.image" alt="{{ item.title }}">
+    </div>
+
+    <!-- Título -->
+    <h3 class="title">{{ item.title }}</h3>
+
+    <!-- Marca -->
+    <p class="brand">{{ item.brand }}</p>
+
+    <!-- Estrellas vacías -->
+    <div class="stars">
+      <span *ngFor="let s of [1,2,3,4,5]">★</span>
+    </div>
+
+    <!-- En stock -->
+    <p class="stock">
+      <span class="check">✔</span>
+      En stock
+    </p>
+
+    <!-- Precio 
+    <p class="price">
+      $ {{ item.price | number:'1.0-0' }}
+    </p>
+-->
+    <!-- Botón -->
+    <button class="btn" routerLink="/contact">contactanos</button>
+
+  </div>
+</div>

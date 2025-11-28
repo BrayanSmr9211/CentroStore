@@ -1,0 +1,74 @@
+.layout {
+   display: flex;
+  position: relative;
+  margin-top: 0; /* muy importante */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  background: white;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%); // Oculto inicialmente
+  position: fixed;
+  top: 60px; // debajo del header
+  bottom: 0;
+  z-index: 10;
+}
+
+.sidebar.open {
+  transform: translateX(0); // se abre
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar li:hover {
+  background: #f1f1f1;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.app-content {
+  padding-top: 160px; /* espacio para header */
+}
+
+.content {
+  margin-left: 55px; // mueve todo el contenido a la derecha del menú
+  padding-top: 80px; // deja espacio para el header
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1500;
+}
+
+.content {
+  margin-left: 55px;
+  padding-top: 80px; /* espacio para el header */
+}
+.main-content {
+  margin-left: 80px; /* el mismo ancho de tu sidebar */
+}

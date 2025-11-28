@@ -1,0 +1,83 @@
+/* base */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 55px;                /* cerrado */
+  background: #ffffff;
+  border-right: 1px solid #e5e5e5;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2000;
+  overflow: hidden;
+  transition: width 0.28s ease, padding 0.28s ease, transform 0.28s ease;
+  transform: translateX(0);   /* stays visible (collapsed) */
+}
+
+/* abierto */
+.sidebar.open {
+  width: 260px;
+  align-items: flex-start;
+  padding-left: 15px;
+}
+
+/* lista */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 10px;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+/* hover */
+.sidebar li:hover {
+  background: #f4f4f4;
+  border-radius: 6px;
+}
+
+/* iconos */
+.sidebar ul li img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0.8);
+  transition: filter 0.15s;
+}
+.sidebar ul li img:hover {
+  filter: brightness(1);
+}
+
+/* texto: oculto cuando está colapsado */
+.sidebar:not(.open) li span {
+  display: none;
+}
+.sidebar.open li span {
+  display: inline-block;
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* overlay (ya lo controla padre con *ngIf) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1500;
+}

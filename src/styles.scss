@@ -1,0 +1,70 @@
+/* ============================================
+   1. ANGULAR MATERIAL (compatible con v15/16)
+============================================= */
+
+@use '@angular/material' as mat;
+
+
+/* ============================================
+   2. IMPORTAR ESTILOS SCSS PROPIOS
+============================================= */
+
+@use 'assets/styles/colors' as *;
+@use 'assets/styles/global' as *;
+
+
+/* ============================================
+   3. IMPORTAR TEMA MATERIAL PREBUILT
+   (sin "~" porque YA NO se usa en Angular)
+============================================= */
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+/* ============================================
+   4. ESTILOS BASE DEL PROYECTO
+============================================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: $gray-light;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: $text-color;
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;      /* Cambia a left:25px si quieres a la izquierda */
+  z-index: 9999;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.whatsapp-float img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.30);
+}
+
+/* Responsive: tamaño más pequeño en pantallas pequeñas */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+  }
+  .whatsapp-float img {
+    width: 56px;
+    height: 56px;
+  }
+}

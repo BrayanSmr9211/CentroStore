@@ -1,0 +1,23 @@
+<div class="carousel">
+
+  <div class="slides">
+    <img 
+      *ngFor="let img of images; let i = index"
+      [src]="img.src"
+      class="slide"
+      [class.active]="i === currentIndex"
+      [alt]="img.route"
+      (click)="navigateTo(i)"
+      style="cursor: pointer"
+    />
+  </div>
+
+  <div class="dots">
+    <span 
+      *ngFor="let dot of images; let i = index"
+      (click)="goToSlide(i)"
+      [class.active]="i === currentIndex">
+    </span>
+  </div>
+
+</div>

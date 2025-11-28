@@ -1,0 +1,40 @@
+<header class="top-bar">
+  <div class="main-content-wrapper">
+    <div class="left">
+
+      <!-- Botón menú -->
+      <div class="menu-btn" (click)="onToggleSidebar()" aria-label="Abrir menú">
+        ☰
+      </div>
+
+      <!-- Logo y texto CENTRO agrupados para centrado -->
+      <div class="logo-group">
+        <img src="assets/Logo.png" alt="Logo" class="logo">
+       
+      </div>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="Buscar productos">
+      <button>🔍</button>
+    </div>
+
+    <!-- LADO DERECHO (Número y Envíos) -->
+    <div class="right">
+      <span class="contact-info">📞 +57 320 9365273</span>
+      <span class="contact-info">🌎 Envíos a nivel nacional</span>
+    </div>
+  </div>
+</header>
+
+<nav class="blue-bar">
+  <ul>
+    <li routerLink="/Home">Inicio</li>
+    <li routerLink="/xbox">Xbox</li>
+    <li routerLink="/nintendo">Nintendo</li>
+    <li routerLink="/playstation">Accesorios</li>
+     <!-- <li routerLink="/Smartphone">Celulares</li> -->
+    <li routerLink="/contact">Contactenos</li>
+  </ul>
+</nav>
+

@@ -1,0 +1,44 @@
+.side-menu {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 260px;
+  background: #fff;
+  height: calc(100% - 110px);
+  transform: translateX(-100%);
+  transition: 0.3s;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  z-index: 900;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.side-menu img {
+  width: 26px;
+}
+
+.overlay {
+  position: fixed;
+  top: 110px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 110px);
+  background: rgba(0,0,0,0.4);
+  z-index: 850;
+}

@@ -1,0 +1,24 @@
+<div class="side-menu" [class.open]="open">
+  <h3 class="title">Categorías</h3>
+
+  <ul>
+    <li>
+      <img src="assets/icons/smartphone.svg">
+      Celulares
+    </li>
+    <li>
+      <img src="assets/icons/playstation.svg">
+      Accesorios
+    </li>
+    <li>
+      <img src="assets/icons/xbox.svg">
+      Xbox
+    </li>
+    <li>
+      <img src="assets/icons/nintendo.svg">
+      Nintendo
+    </li>
+  </ul>
+</div>
+
+<div class="overlay" *ngIf="open" (click)="close()"></div>

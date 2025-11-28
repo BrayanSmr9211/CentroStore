@@ -1,0 +1,24 @@
+<app-header (toggleSidebar)="sidebarOpen = !sidebarOpen"></app-header>
+
+<app-sidebar
+  [open]="sidebarOpen"
+  (toggle)="sidebarOpen = !sidebarOpen"
+  (selectCategory)="onCategoryClick($event)"
+></app-sidebar>
+
+<div class="overlay" *ngIf="sidebarOpen" (click)="sidebarOpen = false"></div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+<!-- Botón flotante de WhatsApp -->
+<a
+  href="https://wa.me/573209365273?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contactar por WhatsApp"
+>
+  <img src="assets/banner/whatsapp.gif" alt="WhatsApp">
+</a>  
+</div> 
+<app-footer></app-footer>

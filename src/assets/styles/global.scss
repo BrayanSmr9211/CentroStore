@@ -1,0 +1,13 @@
+@use './colors' as *;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: $gray-light;
+  color: $text-color;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: $primary-color;
+}

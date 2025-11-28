@@ -1,0 +1,105 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  transition: .2s;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #000;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 14px 0 5px;
+}
+
+.brand {
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.stars {
+  font-size: 18px;
+  color: #ddd;
+  margin: 8px 0;
+}
+
+.stock {
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+}
+
+.check {
+  color: orange;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff7a00;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.btn {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.page-title {
+  font-size: 3em;
+ font-weight: 900;
+ text-align: center;
+ color: #e4000f; // Rojo vibrante de Nintendo
+ text-transform: uppercase;
+ letter-spacing: 5px;
+ margin: 30px 0 20px;
+   margin: 50px 0 70px !important; /* BAJAMOS EL ESPACIO */
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+// Opcional: Para una mejor experiencia en pantallas pequeñas
+@media (max-width: 768px) {
+ .page-title {
+ font-size: 2.5em;
+ letter-spacing: 3px;
+ }
+}
