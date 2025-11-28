@@ -21,26 +21,24 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-  {
-    "glob": "**/*",
-    "input": "public"
-  },
-  {
-    "glob": "**/*",
-    "input": "src/assets",
-    "output": "assets"
-  }
-],
+              {
+                "glob": "**/*",
+                "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              }
+            ],
             "styles": [
               "src/styles.scss",
-                "src/assets/styles/global.scss",
-                  "src/assets/styles/colors.scss"
+              "src/assets/styles/global.scss",
+              "src/assets/styles/colors.scss"
             ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "outputPath": "dist/videogamestore/browser",
+            "optimization": true,
+            "outputHashing": "all"
           },
           "configurations": {
             "production": {
@@ -55,8 +53,7 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "optimization": false,
@@ -86,15 +83,16 @@
           "options": {
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [  {
-    "glob": "**/*",
-    "input": "public"
-  },
-  {
-    "glob": "**/*",
-    "input": "src/assets",
-    "output": "assets"
-  }
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              }
             ],
             "styles": [
               "src/styles.scss"
