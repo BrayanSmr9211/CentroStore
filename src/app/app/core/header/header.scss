@@ -1,124 +1,65 @@
-/* 🔵 BARRA SUPERIOR (AZUL DIFERENTE) */
 .top-bar {
   width: 100%;
   background: #a0c5f6;
-  color: rgb(13, 11, 11);
-  padding: 3px 0;
-  font-size: 10px;
+  padding: 6px 0;
   display: flex;
   justify-content: center;
 }
 
-/* Contenedor para centrar el contenido principal del header */
 .main-content-wrapper {
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-/* LADO IZQUIERDO */
-.left {
+  width: 100%;
+  max-width: 1400px;
   display: flex;
   align-items: center;
-  gap: 10px; 
-}
-
-.menu-btn {
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-  padding-right: 5px; 
-}
-
-/* Agrupación Logo + Texto CENTRO */
-.logo-group {
-    display: flex;
-    align-items: center;
-    gap: 5px; 
-    margin-left: 0.5cm; 
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
 .logo {
-  width: 90px;
-  height: auto; 
+  width: 70px; /* REDUCIDO PARA CELULAR */
 }
 
-.logo-text {
-    font-size: 18px; 
-    font-weight: bold;
+@media (min-width: 768px) {
+  .logo {
+    width: 100px;
+  }
 }
 
-
-/* BUSCADOR */
 .search-box {
   flex: 1;
   display: flex;
-  justify-content: center;
-  margin: 0 20px; 
-  max-width: 600px; 
+  margin: 0 10px;
 }
 
 .search-box input {
   width: 100%;
-  padding: 8px 15px; 
-  border: 1px solid #ccc;
-  border-radius: 25px 0 0 25px;
-  font-size: 14px;
+  padding: 6px 12px;
 }
 
-.search-box button {
-  padding: 8px 15px; 
-  border: 1px solid #ccc;
-  border-left: none;
-  border-radius: 0 25px 25px 0;
-  cursor: pointer;
-  background-color: #f0f0f0;
-}
-
-/* LADO DERECHO */
+/* ===== RIGHT SIDE ===== */
 .right {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
-  gap: 2px; 
-  font-weight: 600;
-  white-space: nowrap; 
-  margin-right: 0.5cm; 
+  display: none;
 }
 
-.contact-info {
-    font-size: 12px; 
+@media (min-width: 768px) {
+  .right {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+  }
 }
 
-/* BARRA AZUL DE NAVEGACIÓN */
-.blue-bar {
-  width: 100%;
-  background: #566dc1;
-  padding: 5px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
+/* ===== NAV ===== */
 .blue-bar ul {
   display: flex;
   justify-content: center;
-  gap: 30px; 
-  list-style: none;
-  color: #fff;
-  font-size: 14px; 
-  font-weight: 600;
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 16px;
+  font-size: 13px;
 }
 
-.blue-bar li {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.blue-bar li:hover {
-  text-decoration: underline;
+@media (max-width: 768px) {
+  .blue-bar ul {
+    font-size: 12px;
+    gap: 10px;
+  }
 }
