@@ -149,3 +149,16 @@
   font-size: 17px;
   font-weight: 500;
 }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

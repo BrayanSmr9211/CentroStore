@@ -1,30 +1,22 @@
 /* ============================================
-   1. ANGULAR MATERIAL (compatible con v15/16)
+   1. ANGULAR MATERIAL
 ============================================= */
-
 @use '@angular/material' as mat;
-
 
 /* ============================================
    2. IMPORTAR ESTILOS SCSS PROPIOS
 ============================================= */
-
 @use 'assets/styles/colors' as *;
 @use 'assets/styles/global' as *;
 
-
 /* ============================================
-   3. IMPORTAR TEMA MATERIAL PREBUILT
-   (sin "~" porque YA NO se usa en Angular)
+   3. TEMA MATERIAL PREBUILT
 ============================================= */
-
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
-
 /* ============================================
-   4. ESTILOS BASE DEL PROYECTO
+   4. ESTILOS BASE
 ============================================= */
-
 html, body {
   margin: 0;
   padding: 0;
@@ -34,11 +26,11 @@ html, body {
   color: $text-color;
 }
 
-
+/* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
-  right: 25px;      /* Cambia a left:25px si quieres a la izquierda */
+  right: 25px;
   z-index: 9999;
   display: inline-block;
   text-decoration: none;
@@ -57,7 +49,7 @@ html, body {
   box-shadow: 0 8px 22px rgba(0,0,0,0.30);
 }
 
-/* Responsive: tamaño más pequeño en pantallas pequeñas */
+/* Responsive */
 @media (max-width: 480px) {
   .whatsapp-float {
     right: 14px;
@@ -66,5 +58,25 @@ html, body {
   .whatsapp-float img {
     width: 56px;
     height: 56px;
+  }
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel,
+.carousel-item {
+  width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 14px !important;
+    line-height: 1.2;
+    white-space: normal;
   }
 }
