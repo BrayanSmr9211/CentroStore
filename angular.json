@@ -88,5 +88,8 @@
       }
     }
   },
-  "defaultProject": "app"
+  "defaultProject": "app",
+  "cli": {
+    "analytics": "beac5db9-9430-43d5-9feb-ac2a325ef34c"
+  }
 }

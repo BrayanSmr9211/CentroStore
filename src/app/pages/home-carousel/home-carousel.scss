@@ -1,16 +1,11 @@
 .carousel {
-  width: 100%;
-  height: 220px; /* ALTURA PARA CELULAR */
-  border-radius: 10px;
+  width: 100%; 
+  height: 450px; /* CLAVE: Altura unificada con el grid de marketing */
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
-  background: #111;
-}
-
-@media (min-width: 768px) {
-  .carousel {
-    height: 450px; /* ALTURA PARA PC */
-  }
+  margin: 0; 
+  background-color: #1a1a1a; 
 }
 
 .slides {
@@ -22,7 +17,7 @@
 .slide {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ✔ LAS IMÁGENES YA NO SE VEN FEAS */
+  object-fit: contain;
   position: absolute;
   top: 0;
   left: 0;
@@ -30,27 +25,30 @@
   transition: opacity .6s ease-in-out;
 }
 
+.slide-container.active {
+  opacity: 1;
+}
+
 .slide.active {
   opacity: 1;
 }
 
-/* 🔵 DOTS */
 .dots {
   position: absolute;
-  bottom: 12px;
+  bottom: 25px;
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .dots span {
-  width: 10px;
-  height: 10px;
-  background: #ffffff66;
+  width: 12px;
+  height: 12px;
+  background: #ffffff88;
   border-radius: 50%;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .dots span.active {
