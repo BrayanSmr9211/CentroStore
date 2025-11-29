@@ -1,65 +1,46 @@
-.top-bar {
-  width: 100%;
-  background: #a0c5f6;
-  padding: 6px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.main-content-wrapper {
-  width: 100%;
-  max-width: 1400px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-}
-
-.logo {
-  width: 70px; /* REDUCIDO PARA CELULAR */
-}
-
-@media (min-width: 768px) {
-  .logo {
-    width: 100px;
-  }
-}
-
-.search-box {
-  flex: 1;
-  display: flex;
-  margin: 0 10px;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 6px 12px;
-}
-
-/* ===== RIGHT SIDE ===== */
-.right {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .right {
-    display: flex;
-    flex-direction: column;
-    font-size: 13px;
-  }
-}
-
-/* ===== NAV ===== */
-.blue-bar ul {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  font-size: 13px;
-}
-
+/* --- Responsive para dispositivos móviles (Header) --- */
 @media (max-width: 768px) {
-  .blue-bar ul {
-    font-size: 12px;
-    gap: 10px;
-  }
+    /* 1. Ocultar o reorganizar elementos en la barra superior */
+    .main-content-wrapper {
+        /* Fuerza a los elementos a apilarse en una columna vertical */
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px 10px 5px; /* Más padding vertical */
+    }
+
+    /* 2. Ocultar el número de contacto y envíos (demasiado largo) */
+    .right {
+        display: none; 
+    }
+
+    /* 3. Ajustar el buscador */
+    .search-box {
+        order: 3; /* Mueve el buscador a la parte de abajo de la barra superior */
+        width: 100%;
+        max-width: none;
+        margin: 5px 0 10px;
+    }
+
+    /* 4. Ajustar el logo (para que no se salga) */
+    .logo-group {
+        order: 1; /* Mantiene el logo arriba */
+        margin-left: 0; /* Elimina el margen fijo */
+    }
+    
+    /* 5. Ajustar el botón de menú */
+    .left {
+        width: 100%;
+        justify-content: space-between; /* Mueve el botón de menú a la izquierda y el logo a la derecha */
+        margin-bottom: 5px;
+    }
+    
+    /* 6. Barra de navegación (Blue Bar) */
+    .blue-bar ul {
+        gap: 10px; /* Reducir mucho el espacio entre links */
+        flex-wrap: wrap; /* CLAVE: Permite que los links pasen a la siguiente línea si no caben */
+        padding: 0 5px; 
+    }
+    .blue-bar li {
+        font-size: 11px; /* Letra más pequeña para que quepan */
+    }
 }
