@@ -1,152 +1,46 @@
-.page-container {
-    max-width: 1400px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    margin-top: -60px; /* Mantener este para escritorio */
-}
+/* =========================
+       B. HOME / LAYOUT PRINCIPAL (CORRECCIÓN)
+       ========================= */
+    .page-container {
+        margin-top: 0; /* Eliminar margen negativo */
+        padding: 0 10px;
+    }
 
-.hero { 
-    padding: 28px 0; 
-    background: transparent;
-    margin-bottom: 20px; 
-}
+    .main-content-grid {
+        display: grid; /* Vuelve a usar Grid */
+        grid-template-columns: 1fr; /* Una sola columna para apilar */
+        gap: 15px; /* Espacio entre el carrusel y las tarjetas */
+    }
 
-/* GRID PRINCIPAL: Carrusel (izquierda) y Marketing (derecha) */
-.main-content-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr; 
-    gap: 20px;
-    margin-bottom: 40px;
-}
+    /* Contenedor del Carrusel (Aseguramos la altura) */
+    .carousel-container {
+        height: 250px; /* CLAVE: Para que el carrusel se vea en móvil */
+    }
 
-/* GRID SECUNDARIO: Tarjetas de Marketing */
-.marketing-grid {
-   display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 2.5fr 1.4fr; 
-    gap: 3px;
-    height: 450px; 
-}
+    /* Contenedor de Marketing (las 3 tarjetas) */
+    .marketing-grid {
+        grid-template-rows: 200px 180px; /* Altura fija para la tarjeta grande y las dos pequeñas */
+        height: auto; /* Se ajusta a las filas */
+        gap: 15px;
+    }
+    
+    /* Fuerzas a que las tarjetas ocupen el ancho completo */
+    .deal-of-the-week-card {
+        grid-column: 1 / span 1; 
+        height: 200px; 
+    }
+    
+    .new-card, .portable-card {
+        grid-column: 1 / span 1; 
+        height: 180px; 
+    }
 
-.marketing-card {
-    border-radius: 8px;
-    overflow: hidden; 
-    position: relative; 
-    background-color: #222; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-    color: white; 
-}
-
-.deal-of-the-week-card {
-    grid-column: 1 / span 2; 
-    width: 100%; 
-    height: 90%; 
-}
-
-/* Estilos de Imagen (CLAVE: object-fit: cover) */
-.marketing-img {
-   width: 100%; 
-    height: 100%; /* Ajustar al 100% del contenedor */
-    /* Mantener cover para eliminar bordes, pero el contenedor definirá el recorte */
-    object-fit: cover; 
-    position: absolute; 
-    top: 0;
-    left: 0;
-    z-index: 1; 
-    margin: auto;
-}
-
-/* Contenedor de Contenido (para el botón) */
-.card-content {
-    position: absolute; 
-    bottom: 0;
-    left: 0;
-    width: 60%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end; 
-    padding: 20px;
-    z-index: 11;
-    height: 60%; 
-}
-
-/* Estilos de Botón */
-.btn-vermas {
-    background-color: #007bff; 
-    color: white; 
-    border: none;
-    border-radius: 4px;
-    padding: 6px 4px; 
-    cursor: pointer;
-    z-index: 12; 
-    transition: background-color 0.3s;
-}
-
-.btn-vermas2 {
-    background-color: #007bff; 
-    color: white; 
-    border: none;
-    border-radius: 4px;
-    padding: 6px 4px; 
-    cursor: pointer;
-    z-index: 12; 
-    transition: background-color 0.3s;
-    margin: 0 auto;
-    width: 60px;
-}
-
-
-.btn-vermas:hover {
-    background-color: #0056b3;
-}
-
-.categories-section {
-    padding: 30px;
-}
-
-.categories-section h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.categories-container {
-    display: flex;
-    gap: 25px;
-    flex-wrap: nowrap;
-}
-
-.category-card {
-    width: 160px;
-    background: #fff;
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform .2s;
-}
-
-.category-card:hover {
-    transform: translateY(-5px);
-}
-
-.category-card img {
-    width: 100%;
-    height: 120px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-.category-card p {
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-/* MOBILE - El código @media ya está en el styles.scss global (Punto 1) */
+    /* Categorías */
+    .categories-container {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .category-card {
+        width: 45%; 
+        max-width: 160px; 
+    }

@@ -9,10 +9,9 @@ width: 100%;
 }
 @media (max-width: 768px) {
     .carousel {
-        /* CLAVE: Reduce la altura para que el carrusel sea más pequeño en móvil */
-        height: 250px; 
-        margin-bottom: 15px; /* Añade un espacio debajo si es necesario */
+        height: 250px; /* Debe coincidir con el carousel-container en móvil */
     }
+}
     
     .slide {
         /* Mantenemos 'contain' para que la imagen no se recorte, 
