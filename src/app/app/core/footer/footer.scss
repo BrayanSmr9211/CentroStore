@@ -1,6 +1,6 @@
 /* --- Footer General --- */
 .footer {
-    background-color: #b1c5e6; /* azul de tu página */
+    background-color: #b1c5e6; 
     color: rgb(42, 37, 37);
     padding: 40px 20px 10px;
     font-family: Arial, sans-serif;
@@ -9,11 +9,10 @@
 /* --- Contenedor Principal (CLAVE: 4 Columnas con Grid) --- */
 .footer-container {
     display: grid;
-    /* Define 4 columnas: la primera más ancha (1.2fr) y las demás iguales (1fr) */
     grid-template-columns: 1.2fr 1fr 1fr 1fr; 
-    gap: 30px; /* Separación entre columnas */
+    gap: 30px; 
     max-width: 1200px; 
-    margin: 0 auto; /* Centra el contenido */
+    margin: 0 auto; 
 }
 
 /* --- Estilos de Secciones --- */
@@ -32,7 +31,7 @@
 }
 
 .footer-section a {
-    color: white;
+    color: white; /* Asegura que el color de los enlaces sea blanco */
     text-decoration: none;
     transition: 0.2s;
     font-size: 0.95em;
@@ -45,16 +44,16 @@
 /* --- Columna 1: Logo y Nombre --- */
 .footer-logo-container {
    display: flex;
-    flex-direction: column;   /* Apila logo + texto */
-    align-items: center;      /* Centra horizontal */
-    justify-content: center;  /* Centra vertical */
-    text-align: center;       /* Centra el texto CENTRO */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
 }
 
 .footer-logo {
     width: 70%;
     height: auto;
-    margin-right: 60px;
+    margin-right: 60px; /* Será ignorado en móvil por el CSS global */
 }
 
 .logo-name {
@@ -65,18 +64,13 @@
 /* Columna 2: Dirección */
 .location-title {
     font-weight: bold;
-    margin-top: 0; /* Asegura que la dirección se alinee con las categorías */
+    margin-top: 0; 
 }
 
 /* Iconos Sociales */
-.footer-social-desktop {
-    margin-top: 20px;
-}
-
 .footer-social {
-    margin-left: 60px;   /* AJUSTA hacia la derecha */
+    margin-left: 60px; /* Será ignorado en móvil por el CSS global */
 }
-
 
 .footer-social a {
     font-size: 26px;
@@ -84,7 +78,6 @@
     color: white;
     transition: 0.2s;
 }
-
 
 .footer-social a:hover {
     color: #ffe48f;
@@ -99,36 +92,4 @@
     font-size: 14px;
 }
 
-/* --- Responsive para dispositivos móviles (Menos de 768px) --- */
-@media (max-width: 768px) {
-    .footer-container {
-        /* En pantallas pequeñas, volvemos a 2 columnas */
-        grid-template-columns: 1fr 1fr; 
-        gap: 20px;
-    }
-    /* Hacemos que la columna 1 y 2 ocupen una fila completa para mejor visualización */
-    .footer-section:nth-child(1) {
-        grid-column: 1 / span 2;
-        /* Movemos los iconos sociales a la parte inferior en móvil */
-        order: 4; 
-    }
-    .footer-section:nth-child(2) {
-        grid-column: 1 / span 2;
-        order: 1; 
-    }
-    .footer-section:nth-child(3) {
-        order: 2; 
-    }
-    .footer-section:nth-child(4) {
-        order: 3; 
-    }
-    
-    .footer-social-desktop {
-        display: none; /* Ocultamos el título "Síguenos" repetido */
-    }
-    
-    /* Mostrar los iconos sociales en una fila en móvil */
-    .footer-section:nth-child(1) .footer-social-desktop {
-        display: block; 
-    }
-}
+/* MOBILE - El código @media ya está en el styles.scss global (Punto 1) */

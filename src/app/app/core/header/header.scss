@@ -1,29 +1,29 @@
 /* 🔵 BARRA SUPERIOR (AZUL DIFERENTE) */
 .top-bar {
   width: 100%;
-  background: #a0c5f6; /* <<--- AQUÍ CAMBIAS EL COLOR */
+  background: #a0c5f6;
   color: rgb(13, 11, 11);
-  padding: 3px 0; /* Padding vertical reducido (era 3px 3px) */
+  padding: 3px 0;
   font-size: 10px;
   display: flex;
-  justify-content: center; /* Centra el wrapper si es necesario */
+  justify-content: center;
 }
 
-/* Contenedor para centrar el contenido principal del header (Logo, Buscador, Contacto) */
+/* Contenedor para centrar el contenido principal del header */
 .main-content-wrapper {
     width: 100%;
-    max-width: 1400px; /* Igual al page-container del home */
+    max-width: 1400px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribuye espacio entre Left, Search, Right */
-    padding: 0 20px; /* Padding lateral para que no toque los bordes */
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 /* LADO IZQUIERDO */
 .left {
   display: flex;
   align-items: center;
-  gap: 10px; /* Reducido para acercar el botón y el logo */
+  gap: 10px; 
 }
 
 .menu-btn {
@@ -31,24 +31,24 @@
   border: none;
   font-size: 26px;
   cursor: pointer;
-  padding-right: 5px; /* Pequeño ajuste visual */
+  padding-right: 5px; 
 }
 
 /* Agrupación Logo + Texto CENTRO */
 .logo-group {
     display: flex;
     align-items: center;
-    gap: 5px; /* Espacio entre el icono y el texto "CENTRO" */
-    margin-left: 0.5cm; /* Mueve todo el grupo a la derecha para centrarlo visualmente */
+    gap: 5px; 
+    margin-left: 0.5cm; 
 }
 
 .logo {
-  width: 90px; /* Tamaño reducido para el icono (era 100px) */
+  width: 90px;
   height: auto; 
 }
 
 .logo-text {
-    font-size: 18px; /* Haz el texto más prominente */
+    font-size: 18px; 
     font-weight: bold;
 }
 
@@ -58,20 +58,20 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  margin: 0 20px; /* Margen para separarlo del logo y el lado derecho */
-  max-width: 600px; /* Límite para que no se estire demasiado */
+  margin: 0 20px; 
+  max-width: 600px; 
 }
 
 .search-box input {
   width: 100%;
-  padding: 8px 15px; /* Padding ajustado */
+  padding: 8px 15px; 
   border: 1px solid #ccc;
   border-radius: 25px 0 0 25px;
   font-size: 14px;
 }
 
 .search-box button {
-  padding: 8px 15px; /* Padding ajustado */
+  padding: 8px 15px; 
   border: 1px solid #ccc;
   border-left: none;
   border-radius: 0 25px 25px 0;
@@ -82,16 +82,16 @@
 /* LADO DERECHO */
 .right {
   display: flex;
-  flex-direction: column; /* Coloca número y envíos uno debajo del otro */
-  align-items: flex-start; /* Alinea el texto a la izquierda en su columna */
-  gap: 2px; /* Espacio reducido entre líneas (acercamiento) */
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 2px; 
   font-weight: 600;
-  white-space: nowrap; /* Evita que el texto se rompa */
-  margin-right: 0.5cm; /* Mueve esta sección a la izquierda para centrarla visualmente (0.5cm) */
+  white-space: nowrap; 
+  margin-right: 0.5cm; 
 }
 
 .contact-info {
-    font-size: 12px; /* Tamaño de fuente ligeramente mayor para la información de contacto */
+    font-size: 12px; 
 }
 
 /* BARRA AZUL DE NAVEGACIÓN */
@@ -105,10 +105,10 @@
 .blue-bar ul {
   display: flex;
   justify-content: center;
-  gap: 30px; /* Reducido de 40px para que las opciones estén más cerca */
+  gap: 30px; 
   list-style: none;
   color: #fff;
-  font-size: 14px; /* Aumentado para mayor legibilidad */
+  font-size: 14px; 
   font-weight: 600;
   max-width: 1400px;
   margin: 0 auto;
