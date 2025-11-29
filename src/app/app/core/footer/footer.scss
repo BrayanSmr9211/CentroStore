@@ -131,4 +131,8 @@
     .footer-section:nth-child(1) .footer-social-desktop {
         display: block; 
     }
+    app-footer {
+    margin-top: 40px; /* empuja el footer */
+    display: block;
+  }
 }

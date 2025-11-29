@@ -42,3 +42,15 @@
   background: rgba(0,0,0,0.4);
   z-index: 850;
 }
+
+@media (max-width: 768px) {
+  .side-menu {
+    top: 70px !important;              /* altura real del header */
+    height: calc(100% - 70px) !important;
+  }
+
+  .overlay {
+    top: 70px !important;
+    height: calc(100% - 70px) !important;
+  }
+}

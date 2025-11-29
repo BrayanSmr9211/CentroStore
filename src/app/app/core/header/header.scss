@@ -122,3 +122,13 @@
 .blue-bar li:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    /* Oculta el icono de menú de la izquierda */
+    /* **ATENCIÓN:** Reemplaza '.menu-icon' con la clase real del ícono. */
+    .menu-icon {
+        display: none !important;
+    }
+
+   
+}

@@ -81,3 +81,12 @@
   background: rgba(0,0,0,0.5);
   z-index: 1500;
 }
+
+/* ============================
+   MOBILE: ocultar sidebar desktop
+============================ */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none !important;
+  }
+}

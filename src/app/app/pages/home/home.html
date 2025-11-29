@@ -1,41 +1,49 @@
-<div class="page-container">
+<div class="home-carousel">
 
   <div class="main-content-grid">
-    <div class="carousel-container">
-      <app-home-carousel></app-home-carousel>
-    </div>
-    
-    <div class="marketing-grid">
-      
-      <div class="marketing-card deal-of-the-week-card">
-        <img src="assets/banner/gaming_promo.png" alt="Ofertas de Consolas y Controles" class="marketing-img">
-        <div class="card-content">
-          <button class="btn-vermas2" routerLink="/nintendo">Ver Más</button>
-        </div>
-      </div>
-      
-      <div class="marketing-card new-card">
-        <img src="assets/banner/smartphone_brands.png" alt="Celulares de Todas las Marcas" class="marketing-img">
-        <div class="card-content">
-          <button class="btn-vermas" routerLink="/Smartphone">Ver Más</button>
-        </div>
-      </div>
-      
-      <div class="marketing-card portable-card">
-        <img src="assets/banner/playstation_promo.png" alt="PlayStation Promociones" class="marketing-img">
-        <div class="card-content">
-          <button class="btn-vermas2" routerLink="/playstation">Ver Más</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
 
-  <section class="categories">
-    </section>
+      <div class="carousel-container">
+        <app-home-carousel></app-home-carousel>
+      </div>
+   
+    <div class="right-column">
+        <div class="marketing-grid">
+
+            <!-- Esta tarjeta actuará como el banner grande superior de la derecha (Black Friday) -->
+            <div class="marketing-card deal-of-the-week-card">
+              <img src="assets/banner/gaming_promo.png" alt="Black Friday" class="marketing-img">
+              <div class="card-content">
+                <button class="btn-vermas2" routerLink="/nintendo">Ver Más</button>
+              </div>
+            </div>
+
+            <!-- Estas tarjetas se ubicarán debajo del banner grande, lado a lado -->
+            <div class="marketing-card new-card">
+              <img src="assets/banner/smartphone_brands.png" alt="Celulares de Todas las Marcas" class="marketing-img">
+              <div class="card-content">
+                <button class="btn-vermas" routerLink="/Smartphone">Ver Más</button>
+              </div>
+            </div>
+
+            <div class="marketing-card portable-card">
+              <img src="assets/banner/playstation_promo.png" alt="PlayStation Promociones" class="marketing-img">
+              <div class="card-content">
+                <button class="btn-vermas2" routerLink="/playstation">Ver Más</button>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+  </div>
+  <!-- 🔴 FIN DEL CONTENEDOR PRINCIPAL ASIMÉTRICO -->
+
+
+  <section class="categories"></section>
 
   <div class="categories-section">
-    <h2>Categorías</h2> 
+    <h2>Categorías</h2>
 
     <div class="categories-container">
 

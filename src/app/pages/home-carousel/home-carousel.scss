@@ -1,18 +1,17 @@
 .carousel {
-  width: 100%; 
-  height: 450px; /* CLAVE: Altura unificada con el grid de marketing */
+  width: 100%;
+  height: 450px; /* para desktop */
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  margin: 0; 
-  background-color: #1a1a1a; 
+  margin: 0;
+  background-color: #1a1a1a;
 }
 
-.slides {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.home-carousel {
+  margin-bottom: 25px;   /* separa el carousel de la imagen de Mario */
 }
+
 
 .slide {
   width: 100%;
@@ -24,15 +23,35 @@
   opacity: 0;
   transition: opacity .6s ease-in-out;
 }
+.marketing-img {
+    width: 100%; 
+    height: 100%; /* Ajustamos a 100% para que el object-fit funcione correctamente */
+    /* 🔴 CAMBIO CLAVE: Usa 'contain' para que la imagen NO se recorte */
+    object-fit: contain; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    margin: auto; 
+}
 
+.page-container {
+    max-width: 140px;
+    margin: 0 auto;
+    padding: 0 5px; 
+    /* 🔴 CAMBIO CLAVE: Reduce este valor negativo para subir todo el contenido. */
+    /* Prueba con -80px, -90px, o incluso -100px dependiendo de la altura de tu header */
+    margin-top: -90px; 
+}
 
 .slide.active {
   opacity: 1;
 }
 
+/* Dots */
 .dots {
   position: absolute;
-  bottom: 25px;
+  bottom: 15px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -40,8 +59,8 @@
 }
 
 .dots span {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background: #ffffff88;
   border-radius: 50%;
   cursor: pointer;
@@ -51,4 +70,21 @@
 .dots span.active {
   background: #fff;
   transform: scale(1.2);
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .slide {
+    object-fit: cover !important; /* llena el espacio correctamente */
+  }
+   .carousel {
+    height: 230px !important;
+  }
+  .carousel-container {
+        margin-bottom: 0px;
+        height: 230px; /* Estaba en 250px, lo subimos */
+    }
+    .slide {
+    object-fit: cover !important;
+  }    
 }
