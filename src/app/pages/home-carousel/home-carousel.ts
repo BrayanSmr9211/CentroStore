@@ -15,8 +15,9 @@ export class HomeCarouselComponent {
 
   images = [
     { src: 'assets/banner/nintendo.png', route: '/nintendo' },
-    { src: 'assets/Image/motopromo.png', route: '/playstation' },
-    { src: 'assets/banner/xboxpromo.png', route: '/xbox' }
+    { src: 'assets/Image/motopromo.png', route: '/Acessario' },
+    { src: 'assets/banner/xboxpromo.png', route: '/xbox' },
+    { src: 'assets/banner/playstation.png', route: '/playstation' },
   ];
 
   currentIndex = 0;

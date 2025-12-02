@@ -39,6 +39,10 @@ select(name: string) {
     case 'Smartphone':
       this.router.navigate(['/Smartphone']);
       break;
+
+      case 'Accesorios':
+      this.router.navigate(['/Accesorios']);
+      break;
   }
 
   // Después de navegar, cerramos el menú (opcional)

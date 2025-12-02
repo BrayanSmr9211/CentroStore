@@ -4,6 +4,7 @@ import { Routes } from '@angular/router';
 import { NintendoComponent } from './pages/nintendo/nintendo';
 import { Playstation } from './pages/playstation/playstation';
 import { Smartphone } from './pages/smartphone/smartphone';
+import { Accesorios } from './pages/accesorios/accesorios';
 import { Xbox } from './pages/xbox/xbox';
 import { Contact } from './contact/contact';
 
@@ -18,7 +19,7 @@ export const routes: Routes = [
   { path: 'Smartphone', component: Smartphone },
   { path: 'xbox', component: Xbox },
   { path: 'contact', component: Contact },
+    { path: 'Accesorios', component: Accesorios },
   
-  // Cualquier ruta que no exista
   { path: '**', redirectTo: 'Home' }
 ];
